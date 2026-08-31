@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "timmo.notes",
+  "name": "Notes",
+  "version": "1.0.0",
+  "author": "Timmo",
+  "license": "Apache-2.0",
+  "description": "Browse, edit, create, and capture repository notes",
+  "kinds": ["service", "bar-widget"],
+  "keepLoaded": true,
+  "entryPoints": {
+    "service": "Service.qml",
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Notes",
+    "description": "Browse and manage repository notes",
+    "category": "Utility",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "primaryOnly": true,
+      "primaryOutput": ""
+    },
+    "schema": [
+      {
+        "key": "primaryOnly",
+        "type": "boolean",
+        "label": "Primary output only",
+        "defaultValue": true
+      },
+      {
+        "key": "primaryOutput",
+        "type": "string",
+        "label": "Primary output",
+        "defaultValue": "",
+        "description": "Optional output name used when primary output only is enabled."
+      }
+    ]
+  }
+}
